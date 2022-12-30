@@ -1,0 +1,165 @@
+:root{
+    --mainColor:#fdfef8;
+    --buttonColor :#1fc34b;
+    --noteColor:#db312d;
+    --headColor:#1f43c3;
+
+}
+body{
+    margin: 0;
+    background-color: #e6e9f0;
+    
+}
+.container{
+    display: grid;
+    grid-template-columns: 250px auto;
+    grid-template-rows:90px auto ;
+    grid-template-areas:"h h" "sl m";
+    grid-gap:30px 130px ;
+    
+}
+.head{
+    grid-area: h;
+    background-color : var(--headColor);
+    color:var(--mainColor) ;
+    font-size: 50px;
+    padding: 15px 0 20px 30px;
+    font-family: 'Fredoka One', cursive;
+}
+.side-left{
+    grid-area: sl;
+    background-color: var(--mainColor);
+    height: 80%;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 4px 5px 10px 0px #b6b7b8;
+    margin-left:35px ;
+    padding-left: 10px;
+    font-family: 'Roboto', sans-serif;
+
+}
+.checkbox-list{
+    display: grid;
+    width: 180px;
+    grid-template-columns: repeat(2,auto);
+    row-gap: 5px;
+}
+input[type='checkbox'] {
+    accent-color: var(--headColor);
+}
+.price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.price>p{
+    font-size: 12px;
+    padding-right: 35px;
+}
+input[type='range']{
+    width: 90%;
+    accent-color: var(--headColor);
+}
+.main{
+    display: grid;
+    grid-area: m; 
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: repeat(2,auto);
+    grid-gap: 30px 40px;
+    margin-right: 120px;
+    font-family: 'Fredoka One', cursive;
+}
+.product{
+    background-color: var(--mainColor);
+    border-radius: 10px;
+    box-shadow: 4px 5px 10px 0px #b6b7b8;
+    padding-top: 25px;
+    padding-left: 25px;
+}
+.image>img{
+    width: 85%;
+    border-radius: 10px;
+    margin-left: 4%; 
+}
+.image{
+    position: relative;
+}
+.image::after{
+    position: absolute;
+    content: "25$";
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    color: var(--mainColor);
+    padding: 2px 17px;
+    background-color: var(--buttonColor);
+   border-radius: 5px;
+   top: 10px;
+   right: 35px;
+  
+}
+.product>p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    color: rgba(0, 0, 0, 0.501);
+}
+.two{
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: auto;
+    position: relative;
+}
+.two .image img{
+    width: 95%;
+    height: 90%;
+    border-radius: 10px;
+    margin-left: 0; 
+}
+.two::after{
+    position: absolute;
+    content: "Suggested For You";
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color:var(--mainColor);
+    padding: 2px 17px;
+    background-color:var(--noteColor);
+   border-radius: 10px;
+   top: 10px;
+   right: 20px;
+  
+}
+.content{
+    padding-right: 10px ;
+}
+.content>p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+.content>h2{
+    font-family: 'Roboto', sans-serif;
+}
+.content>h2>span{
+    color: var(--noteColor);
+}
+button{
+    text-align: center;
+    margin-left: 10px;
+    border-radius: 5px;
+    border: 0;
+    color: var(--mainColor);
+    width: 90%;
+    font-family: 'Fredoka One', cursive;
+    font-size: 25px;
+}
+.button1{
+    background-color: var(--buttonColor);
+    margin-bottom: 4px;
+    height: 15%;
+}
+.button2{
+    background-color: var(--headColor);
+    height: 10%;
+}
+
+
+
